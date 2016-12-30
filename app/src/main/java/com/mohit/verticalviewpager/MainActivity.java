@@ -125,9 +125,9 @@ public class MainActivity extends AppCompatActivity {
                 float newX = event.getX();
                 float newY = event.getY();
 
-                if((newX-oldX) > 50){
+                if((newX-oldX) > 50 && Math.abs(newY-oldY) <= 100){
                     swipeDirection("right");
-                }else if (newX-oldX < -50){
+                }else if (newX-oldX < -50 && Math.abs(newY-oldY) <= 100){
                     swipeDirection("left");
                 }
                 break;
